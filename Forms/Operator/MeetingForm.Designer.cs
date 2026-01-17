@@ -44,12 +44,30 @@
             labelLocation = new Label();
             lblMeetingNo = new Label();
             tabAgenda = new TabPage();
+            dataGridView1 = new DataGridView();
+            panelMeetingSelected = new Panel();
+            comboBox1 = new ComboBox();
+            lblMeeting = new Label();
+            gbAgenda = new GroupBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            lblDocument = new Label();
+            lblOffice = new Label();
+            lblAgendaTitle = new Label();
+            btnAdd = new Button();
+            button2 = new Button();
+            btnRemove = new Button();
             tabRecording = new TabPage();
             tabAssignments = new TabPage();
             tabOperator.SuspendLayout();
             tabMetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMeeting).BeginInit();
             groupBoxMetting.SuspendLayout();
+            tabAgenda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panelMeetingSelected.SuspendLayout();
+            gbAgenda.SuspendLayout();
             SuspendLayout();
             // 
             // tabOperator
@@ -208,12 +226,152 @@
             // tabAgenda
             // 
             tabAgenda.BackColor = Color.Silver;
+            tabAgenda.Controls.Add(dataGridView1);
+            tabAgenda.Controls.Add(panelMeetingSelected);
+            tabAgenda.Controls.Add(gbAgenda);
             tabAgenda.Location = new Point(4, 24);
             tabAgenda.Name = "tabAgenda";
             tabAgenda.Padding = new Padding(3);
             tabAgenda.Size = new Size(1268, 422);
             tabAgenda.TabIndex = 1;
             tabAgenda.Text = "Agendas";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Left;
+            dataGridView1.Location = new Point(3, 66);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(781, 353);
+            dataGridView1.TabIndex = 3;
+            // 
+            // panelMeetingSelected
+            // 
+            panelMeetingSelected.BackColor = Color.LightGray;
+            panelMeetingSelected.Controls.Add(comboBox1);
+            panelMeetingSelected.Controls.Add(lblMeeting);
+            panelMeetingSelected.Dock = DockStyle.Top;
+            panelMeetingSelected.Location = new Point(3, 3);
+            panelMeetingSelected.Name = "panelMeetingSelected";
+            panelMeetingSelected.Size = new Size(781, 63);
+            panelMeetingSelected.TabIndex = 2;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(124, 13);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(248, 23);
+            comboBox1.TabIndex = 6;
+            // 
+            // lblMeeting
+            // 
+            lblMeeting.AutoSize = true;
+            lblMeeting.Location = new Point(27, 16);
+            lblMeeting.Name = "lblMeeting";
+            lblMeeting.Size = new Size(91, 15);
+            lblMeeting.TabIndex = 5;
+            lblMeeting.Text = "Select Meeting :";
+            // 
+            // gbAgenda
+            // 
+            gbAgenda.BackColor = Color.LightGray;
+            gbAgenda.Controls.Add(textBox3);
+            gbAgenda.Controls.Add(textBox2);
+            gbAgenda.Controls.Add(textBox1);
+            gbAgenda.Controls.Add(lblDocument);
+            gbAgenda.Controls.Add(lblOffice);
+            gbAgenda.Controls.Add(lblAgendaTitle);
+            gbAgenda.Controls.Add(btnAdd);
+            gbAgenda.Controls.Add(button2);
+            gbAgenda.Controls.Add(btnRemove);
+            gbAgenda.Dock = DockStyle.Right;
+            gbAgenda.Location = new Point(784, 3);
+            gbAgenda.Name = "gbAgenda";
+            gbAgenda.Size = new Size(481, 416);
+            gbAgenda.TabIndex = 1;
+            gbAgenda.TabStop = false;
+            gbAgenda.Text = "Agenda Details";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(43, 180);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(262, 23);
+            textBox3.TabIndex = 10;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(43, 110);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(262, 23);
+            textBox2.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(43, 56);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(262, 23);
+            textBox1.TabIndex = 8;
+            // 
+            // lblDocument
+            // 
+            lblDocument.AutoSize = true;
+            lblDocument.Location = new Point(43, 149);
+            lblDocument.Name = "lblDocument";
+            lblDocument.Size = new Size(131, 15);
+            lblDocument.TabIndex = 7;
+            lblDocument.Text = "Supporting Document :";
+            // 
+            // lblOffice
+            // 
+            lblOffice.AutoSize = true;
+            lblOffice.Location = new Point(43, 92);
+            lblOffice.Name = "lblOffice";
+            lblOffice.Size = new Size(45, 15);
+            lblOffice.TabIndex = 6;
+            lblOffice.Text = "Office :";
+            // 
+            // lblAgendaTitle
+            // 
+            lblAgendaTitle.AutoSize = true;
+            lblAgendaTitle.Location = new Point(43, 38);
+            lblAgendaTitle.Name = "lblAgendaTitle";
+            lblAgendaTitle.Size = new Size(80, 15);
+            lblAgendaTitle.TabIndex = 5;
+            lblAgendaTitle.Text = "Agenda Title :";
+            lblAgendaTitle.Click += label1_Click;
+            // 
+            // btnAdd
+            // 
+            btnAdd.BackColor = Color.LimeGreen;
+            btnAdd.Location = new Point(99, 295);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(75, 23);
+            btnAdd.TabIndex = 2;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.CornflowerBlue;
+            button2.Location = new Point(197, 295);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 3;
+            button2.Text = "Update";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // btnRemove
+            // 
+            btnRemove.BackColor = Color.FromArgb(255, 128, 128);
+            btnRemove.Location = new Point(331, 295);
+            btnRemove.Name = "btnRemove";
+            btnRemove.Size = new Size(75, 23);
+            btnRemove.TabIndex = 4;
+            btnRemove.Text = "Remove";
+            btnRemove.UseVisualStyleBackColor = false;
             // 
             // tabRecording
             // 
@@ -247,6 +405,12 @@
             ((System.ComponentModel.ISupportInitialize)dgvMeeting).EndInit();
             groupBoxMetting.ResumeLayout(false);
             groupBoxMetting.PerformLayout();
+            tabAgenda.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panelMeetingSelected.ResumeLayout(false);
+            panelMeetingSelected.PerformLayout();
+            gbAgenda.ResumeLayout(false);
+            gbAgenda.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -270,5 +434,19 @@
         private Button btnUpdate;
         private Button btnSave;
         private DataGridView dgvMeeting;
+        private GroupBox gbAgenda;
+        private Button btnRemove;
+        private Button button2;
+        private Button btnAdd;
+        private Panel panelMeetingSelected;
+        private Label lblMeeting;
+        private ComboBox comboBox1;
+        private Label lblDocument;
+        private Label lblOffice;
+        private Label lblAgendaTitle;
+        private TextBox textBox1;
+        private DataGridView dataGridView1;
+        private TextBox textBox3;
+        private TextBox textBox2;
     }
 }
