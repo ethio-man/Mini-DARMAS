@@ -30,23 +30,25 @@
         {
             tabOperator = new TabControl();
             tabMetting = new TabPage();
+            dataGridView1 = new DataGridView();
+            groupBoxMetting = new GroupBox();
+            btnDelete = new Button();
+            btnUpdate = new Button();
+            btnSave = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            txtLocation = new TextBox();
+            txtChairperson = new TextBox();
+            txtMeeting = new TextBox();
+            lblDate = new Label();
+            lblChairperson = new Label();
+            labelLocation = new Label();
+            lblMeetingNo = new Label();
             tabAgenda = new TabPage();
             tabRecording = new TabPage();
             tabAssignments = new TabPage();
-            groupBoxMetting = new GroupBox();
-            lblMeetingNo = new Label();
-            labelLocation = new Label();
-            lblChairperson = new Label();
-            lblDate = new Label();
-            txtMeeting = new TextBox();
-            txtChairperson = new TextBox();
-            txtLocation = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            btnSave = new Button();
-            btnUpdate = new Button();
-            btnDelete = new Button();
             tabOperator.SuspendLayout();
             tabMetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBoxMetting.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,50 +58,34 @@
             tabOperator.Controls.Add(tabAgenda);
             tabOperator.Controls.Add(tabRecording);
             tabOperator.Controls.Add(tabAssignments);
-            tabOperator.Location = new Point(3, 2);
+            tabOperator.Dock = DockStyle.Fill;
+            tabOperator.ItemSize = new Size(107, 20);
+            tabOperator.Location = new Point(0, 0);
             tabOperator.Name = "tabOperator";
             tabOperator.SelectedIndex = 0;
-            tabOperator.Size = new Size(801, 453);
+            tabOperator.Size = new Size(1276, 450);
             tabOperator.TabIndex = 0;
             // 
             // tabMetting
             // 
             tabMetting.BackColor = Color.Silver;
+            tabMetting.Controls.Add(dataGridView1);
             tabMetting.Controls.Add(groupBoxMetting);
             tabMetting.Location = new Point(4, 24);
             tabMetting.Name = "tabMetting";
             tabMetting.Padding = new Padding(3);
-            tabMetting.Size = new Size(793, 425);
+            tabMetting.Size = new Size(1268, 422);
             tabMetting.TabIndex = 0;
             tabMetting.Text = "Meetings";
             // 
-            // tabAgenda
+            // dataGridView1
             // 
-            tabAgenda.BackColor = Color.Silver;
-            tabAgenda.Location = new Point(4, 24);
-            tabAgenda.Name = "tabAgenda";
-            tabAgenda.Padding = new Padding(3);
-            tabAgenda.Size = new Size(793, 425);
-            tabAgenda.TabIndex = 1;
-            tabAgenda.Text = "Agendas";
-            // 
-            // tabRecording
-            // 
-            tabRecording.BackColor = Color.Silver;
-            tabRecording.Location = new Point(4, 24);
-            tabRecording.Name = "tabRecording";
-            tabRecording.Size = new Size(793, 425);
-            tabRecording.TabIndex = 2;
-            tabRecording.Text = "Recordings";
-            // 
-            // tabAssignments
-            // 
-            tabAssignments.BackColor = Color.Silver;
-            tabAssignments.Location = new Point(4, 24);
-            tabAssignments.Name = "tabAssignments";
-            tabAssignments.Size = new Size(793, 425);
-            tabAssignments.TabIndex = 3;
-            tabAssignments.Text = "Assignments";
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(3, 158);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(1262, 261);
+            dataGridView1.TabIndex = 1;
             // 
             // groupBoxMetting
             // 
@@ -115,21 +101,91 @@
             groupBoxMetting.Controls.Add(lblChairperson);
             groupBoxMetting.Controls.Add(labelLocation);
             groupBoxMetting.Controls.Add(lblMeetingNo);
-            groupBoxMetting.Location = new Point(6, 6);
+            groupBoxMetting.Dock = DockStyle.Top;
+            groupBoxMetting.Location = new Point(3, 3);
             groupBoxMetting.Name = "groupBoxMetting";
-            groupBoxMetting.Size = new Size(784, 155);
+            groupBoxMetting.Size = new Size(1262, 155);
             groupBoxMetting.TabIndex = 0;
             groupBoxMetting.TabStop = false;
             groupBoxMetting.Text = "Metting Detials";
             // 
-            // lblMeetingNo
+            // btnDelete
             // 
-            lblMeetingNo.AutoSize = true;
-            lblMeetingNo.Location = new Point(43, 29);
-            lblMeetingNo.Name = "lblMeetingNo";
-            lblMeetingNo.Size = new Size(76, 15);
-            lblMeetingNo.TabIndex = 0;
-            lblMeetingNo.Text = "Meeting No :";
+            btnDelete.BackColor = Color.FromArgb(255, 192, 192);
+            btnDelete.Location = new Point(1075, 111);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(75, 23);
+            btnDelete.TabIndex = 11;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.FromArgb(192, 192, 255);
+            btnUpdate.Location = new Point(931, 110);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(75, 23);
+            btnUpdate.TabIndex = 10;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnSave
+            // 
+            btnSave.BackColor = Color.FromArgb(128, 255, 128);
+            btnSave.Location = new Point(779, 110);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(75, 23);
+            btnSave.TabIndex = 9;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.Location = new Point(364, 110);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(170, 23);
+            dateTimePicker1.TabIndex = 8;
+            // 
+            // txtLocation
+            // 
+            txtLocation.Location = new Point(43, 111);
+            txtLocation.Name = "txtLocation";
+            txtLocation.Size = new Size(170, 23);
+            txtLocation.TabIndex = 7;
+            // 
+            // txtChairperson
+            // 
+            txtChairperson.Location = new Point(364, 56);
+            txtChairperson.Name = "txtChairperson";
+            txtChairperson.Size = new Size(170, 23);
+            txtChairperson.TabIndex = 5;
+            // 
+            // txtMeeting
+            // 
+            txtMeeting.Location = new Point(43, 47);
+            txtMeeting.Name = "txtMeeting";
+            txtMeeting.Size = new Size(170, 23);
+            txtMeeting.TabIndex = 4;
+            // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Location = new Point(364, 93);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(37, 15);
+            lblDate.TabIndex = 3;
+            lblDate.Text = "Date :";
+            // 
+            // lblChairperson
+            // 
+            lblChairperson.AutoSize = true;
+            lblChairperson.Location = new Point(364, 38);
+            lblChairperson.Name = "lblChairperson";
+            lblChairperson.Size = new Size(77, 15);
+            lblChairperson.TabIndex = 2;
+            lblChairperson.Text = "Chairperson :";
             // 
             // labelLocation
             // 
@@ -140,95 +196,55 @@
             labelLocation.TabIndex = 1;
             labelLocation.Text = "Location :";
             // 
-            // lblChairperson
+            // lblMeetingNo
             // 
-            lblChairperson.AutoSize = true;
-            lblChairperson.Location = new Point(325, 38);
-            lblChairperson.Name = "lblChairperson";
-            lblChairperson.Size = new Size(77, 15);
-            lblChairperson.TabIndex = 2;
-            lblChairperson.Text = "Chairperson :";
+            lblMeetingNo.AutoSize = true;
+            lblMeetingNo.Location = new Point(43, 29);
+            lblMeetingNo.Name = "lblMeetingNo";
+            lblMeetingNo.Size = new Size(76, 15);
+            lblMeetingNo.TabIndex = 0;
+            lblMeetingNo.Text = "Meeting No :";
             // 
-            // lblDate
+            // tabAgenda
             // 
-            lblDate.AutoSize = true;
-            lblDate.Location = new Point(325, 93);
-            lblDate.Name = "lblDate";
-            lblDate.Size = new Size(37, 15);
-            lblDate.TabIndex = 3;
-            lblDate.Text = "Date :";
+            tabAgenda.BackColor = Color.Silver;
+            tabAgenda.Location = new Point(4, 24);
+            tabAgenda.Name = "tabAgenda";
+            tabAgenda.Padding = new Padding(3);
+            tabAgenda.Size = new Size(922, 422);
+            tabAgenda.TabIndex = 1;
+            tabAgenda.Text = "Agendas";
             // 
-            // txtMeeting
+            // tabRecording
             // 
-            txtMeeting.Location = new Point(43, 47);
-            txtMeeting.Name = "txtMeeting";
-            txtMeeting.Size = new Size(170, 23);
-            txtMeeting.TabIndex = 4;
+            tabRecording.BackColor = Color.Silver;
+            tabRecording.Location = new Point(4, 24);
+            tabRecording.Name = "tabRecording";
+            tabRecording.Size = new Size(922, 422);
+            tabRecording.TabIndex = 2;
+            tabRecording.Text = "Recordings";
             // 
-            // txtChairperson
+            // tabAssignments
             // 
-            txtChairperson.Location = new Point(325, 56);
-            txtChairperson.Name = "txtChairperson";
-            txtChairperson.Size = new Size(170, 23);
-            txtChairperson.TabIndex = 5;
-            // 
-            // txtLocation
-            // 
-            txtLocation.Location = new Point(43, 111);
-            txtLocation.Name = "txtLocation";
-            txtLocation.Size = new Size(170, 23);
-            txtLocation.TabIndex = 7;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm";
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(325, 111);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(170, 23);
-            dateTimePicker1.TabIndex = 8;
-            // 
-            // btnSave
-            // 
-            btnSave.BackColor = Color.FromArgb(128, 255, 128);
-            btnSave.Location = new Point(526, 89);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(75, 23);
-            btnSave.TabIndex = 9;
-            btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            btnUpdate.BackColor = Color.FromArgb(192, 192, 255);
-            btnUpdate.Location = new Point(607, 89);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(75, 23);
-            btnUpdate.TabIndex = 10;
-            btnUpdate.Text = "Update";
-            btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            btnDelete.BackColor = Color.FromArgb(255, 192, 192);
-            btnDelete.Location = new Point(688, 89);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(75, 23);
-            btnDelete.TabIndex = 11;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = false;
+            tabAssignments.BackColor = Color.Silver;
+            tabAssignments.Location = new Point(4, 24);
+            tabAssignments.Name = "tabAssignments";
+            tabAssignments.Size = new Size(922, 422);
+            tabAssignments.TabIndex = 3;
+            tabAssignments.Text = "Assignments";
             // 
             // MeetingForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.HotTrack;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.SteelBlue;
+            ClientSize = new Size(1276, 450);
             Controls.Add(tabOperator);
             Name = "MeetingForm";
             Text = "MeetingForm";
             tabOperator.ResumeLayout(false);
             tabMetting.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBoxMetting.ResumeLayout(false);
             groupBoxMetting.PerformLayout();
             ResumeLayout(false);
@@ -253,5 +269,6 @@
         private Button btnDelete;
         private Button btnUpdate;
         private Button btnSave;
+        private DataGridView dataGridView1;
     }
 }

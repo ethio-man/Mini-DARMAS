@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mini-DARMAS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a18c753320c6f53762a99726c29b9d8d42900ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+645f8741eaf87be0dd6364f66ca15f823db5a3ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mini-DARMAS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mini-DARMAS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
