@@ -1,10 +1,15 @@
+# Ignore build output
 .vs/
+bin/
 obj/
+
+# Ignore user-specific files
 *.user
 *.suo
-*.log
 *.cache
-Ignore NuGet
+*.log
+
+# Ignore NuGet
+project.assets.json
 *.nuget.g.props
 *.nuget.g.targets
-project.assets.json
