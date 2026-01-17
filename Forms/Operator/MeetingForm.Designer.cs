@@ -30,7 +30,7 @@
         {
             tabOperator = new TabControl();
             tabMetting = new TabPage();
-            dataGridView1 = new DataGridView();
+            dgvMeeting = new DataGridView();
             groupBoxMetting = new GroupBox();
             btnDelete = new Button();
             btnUpdate = new Button();
@@ -48,7 +48,7 @@
             tabAssignments = new TabPage();
             tabOperator.SuspendLayout();
             tabMetting.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMeeting).BeginInit();
             groupBoxMetting.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             // tabMetting
             // 
             tabMetting.BackColor = Color.Silver;
-            tabMetting.Controls.Add(dataGridView1);
+            tabMetting.Controls.Add(dgvMeeting);
             tabMetting.Controls.Add(groupBoxMetting);
             tabMetting.Location = new Point(4, 24);
             tabMetting.Name = "tabMetting";
@@ -78,14 +78,14 @@
             tabMetting.TabIndex = 0;
             tabMetting.Text = "Meetings";
             // 
-            // dataGridView1
+            // dgvMeeting
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 158);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1262, 261);
-            dataGridView1.TabIndex = 1;
+            dgvMeeting.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMeeting.Dock = DockStyle.Fill;
+            dgvMeeting.Location = new Point(3, 158);
+            dgvMeeting.Name = "dgvMeeting";
+            dgvMeeting.Size = new Size(1262, 261);
+            dgvMeeting.TabIndex = 1;
             // 
             // groupBoxMetting
             // 
@@ -211,7 +211,7 @@
             tabAgenda.Location = new Point(4, 24);
             tabAgenda.Name = "tabAgenda";
             tabAgenda.Padding = new Padding(3);
-            tabAgenda.Size = new Size(922, 422);
+            tabAgenda.Size = new Size(1268, 422);
             tabAgenda.TabIndex = 1;
             tabAgenda.Text = "Agendas";
             // 
@@ -220,7 +220,7 @@
             tabRecording.BackColor = Color.Silver;
             tabRecording.Location = new Point(4, 24);
             tabRecording.Name = "tabRecording";
-            tabRecording.Size = new Size(922, 422);
+            tabRecording.Size = new Size(1268, 422);
             tabRecording.TabIndex = 2;
             tabRecording.Text = "Recordings";
             // 
@@ -229,7 +229,7 @@
             tabAssignments.BackColor = Color.Silver;
             tabAssignments.Location = new Point(4, 24);
             tabAssignments.Name = "tabAssignments";
-            tabAssignments.Size = new Size(922, 422);
+            tabAssignments.Size = new Size(1268, 422);
             tabAssignments.TabIndex = 3;
             tabAssignments.Text = "Assignments";
             // 
@@ -244,7 +244,7 @@
             Text = "MeetingForm";
             tabOperator.ResumeLayout(false);
             tabMetting.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMeeting).EndInit();
             groupBoxMetting.ResumeLayout(false);
             groupBoxMetting.PerformLayout();
             ResumeLayout(false);
@@ -269,6 +269,6 @@
         private Button btnDelete;
         private Button btnUpdate;
         private Button btnSave;
-        private DataGridView dataGridView1;
+        private DataGridView dgvMeeting;
     }
 }
