@@ -1,1 +1,10 @@
 .vs/
+obj/
+*.user
+*.suo
+*.log
+*.cache
+Ignore NuGet
+*.nuget.g.props
+*.nuget.g.targets
+project.assets.json
