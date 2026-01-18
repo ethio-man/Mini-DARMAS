@@ -1,6 +1,6 @@
 ﻿namespace Mini_DARMAS.Forms.Admin
 {
-    partial class UserEditForm
+    partial class AdminDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "UserEditForm";
+            lblTitle = new Label();
+            btnManageUsers = new Button();
+            btnLogout = new Button();
+            SuspendLayout();
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(252, 19);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(293, 45);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Admin Dashboard";
+            // 
+            // btnManageUsers
+            // 
+            btnManageUsers.Location = new Point(24, 334);
+            btnManageUsers.Name = "btnManageUsers";
+            btnManageUsers.Size = new Size(142, 34);
+            btnManageUsers.TabIndex = 1;
+            btnManageUsers.Text = "Manage Users";
+            btnManageUsers.UseVisualStyleBackColor = true;
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(620, 334);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(142, 34);
+            btnLogout.TabIndex = 2;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            // 
+            // AdminDashboard
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnLogout);
+            Controls.Add(btnManageUsers);
+            Controls.Add(lblTitle);
+            Name = "AdminDashboard";
+            Text = "Admin Dashboard";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblTitle;
+        private Button btnManageUsers;
+        private Button btnLogout;
     }
 }

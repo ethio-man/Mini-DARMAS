@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Mini_DARMAS.Forms.Admin
 {
-    public partial class UserEditForm : Form
+    public partial class AdminDashboard : Form
     {
-        public UserEditForm()
+        public AdminDashboard()
         {
             InitializeComponent();
         }
