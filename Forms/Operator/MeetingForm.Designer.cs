@@ -567,11 +567,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(144, 129);
+            label1.Location = new Point(256, 136);
             label1.Name = "label1";
-            label1.Size = new Size(101, 15);
+            label1.Size = new Size(95, 15);
             label1.TabIndex = 0;
-            label1.Text = "Recording Timer :";
+            label1.Text = "Recording Timer";
             label1.Click += label1_Click_1;
             // 
             // MeetingForm
@@ -649,10 +649,10 @@
         private Label label1;
         private Button button4;
         private Button button3;
+        private Button button1;
         private DataGridView dgvRecordings;
         private GroupBox gbFile;
         private Button btnBrowseRecord;
-        private Button button1;
         private Label lblFile;
         private GroupBox groupBox2;
     }
