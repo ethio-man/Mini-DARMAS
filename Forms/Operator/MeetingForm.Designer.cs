@@ -62,6 +62,8 @@
             tabRecording = new TabPage();
             dataGridView2 = new DataGridView();
             gbRecording = new GroupBox();
+            txtRecordingPath = new TextBox();
+            lblRecordingPath = new Label();
             lblFile = new Label();
             btnBrowseRecord = new Button();
             label1 = new Label();
@@ -74,8 +76,19 @@
             labelAgenda = new Label();
             labelMeeting = new Label();
             tabAssignments = new TabPage();
-            lblRecordingPath = new Label();
-            txtRecordingPath = new TextBox();
+            groupBox3 = new GroupBox();
+            label2 = new Label();
+            dgvAssignment = new DataGridView();
+            btnAssign = new Button();
+            cmbStatus = new ComboBox();
+            cmbTranscriber = new ComboBox();
+            labelTranscriber = new Label();
+            groupBox2 = new GroupBox();
+            dgvRecordings = new DataGridView();
+            comboBox5 = new ComboBox();
+            comboBox4 = new ComboBox();
+            label3 = new Label();
+            lableMeeting = new Label();
             tabOperator.SuspendLayout();
             tabMetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMeeting).BeginInit();
@@ -88,6 +101,11 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             gbRecording.SuspendLayout();
             groupBox1.SuspendLayout();
+            tabAssignments.SuspendLayout();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAssignment).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecordings).BeginInit();
             SuspendLayout();
             // 
             // tabOperator
@@ -444,6 +462,22 @@
             gbRecording.TabStop = false;
             gbRecording.Text = "Recording Controls";
             // 
+            // txtRecordingPath
+            // 
+            txtRecordingPath.Location = new Point(212, 95);
+            txtRecordingPath.Name = "txtRecordingPath";
+            txtRecordingPath.Size = new Size(231, 23);
+            txtRecordingPath.TabIndex = 4;
+            // 
+            // lblRecordingPath
+            // 
+            lblRecordingPath.AutoSize = true;
+            lblRecordingPath.Location = new Point(89, 98);
+            lblRecordingPath.Name = "lblRecordingPath";
+            lblRecordingPath.Size = new Size(94, 15);
+            lblRecordingPath.TabIndex = 3;
+            lblRecordingPath.Text = "Recording Path :";
+            // 
             // lblFile
             // 
             lblFile.AutoSize = true;
@@ -561,27 +595,141 @@
             // tabAssignments
             // 
             tabAssignments.BackColor = Color.Silver;
+            tabAssignments.Controls.Add(groupBox3);
+            tabAssignments.Controls.Add(groupBox2);
             tabAssignments.Location = new Point(4, 24);
             tabAssignments.Name = "tabAssignments";
             tabAssignments.Size = new Size(1268, 422);
             tabAssignments.TabIndex = 3;
             tabAssignments.Text = "Assignments";
             // 
-            // lblRecordingPath
+            // groupBox3
             // 
-            lblRecordingPath.AutoSize = true;
-            lblRecordingPath.Location = new Point(89, 98);
-            lblRecordingPath.Name = "lblRecordingPath";
-            lblRecordingPath.Size = new Size(94, 15);
-            lblRecordingPath.TabIndex = 3;
-            lblRecordingPath.Text = "Recording Path :";
+            groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox3.Controls.Add(label2);
+            groupBox3.Controls.Add(dgvAssignment);
+            groupBox3.Controls.Add(btnAssign);
+            groupBox3.Controls.Add(cmbStatus);
+            groupBox3.Controls.Add(cmbTranscriber);
+            groupBox3.Controls.Add(labelTranscriber);
+            groupBox3.Location = new Point(648, 0);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(620, 422);
+            groupBox3.TabIndex = 1;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Assignment";
             // 
-            // txtRecordingPath
+            // label2
             // 
-            txtRecordingPath.Location = new Point(212, 95);
-            txtRecordingPath.Name = "txtRecordingPath";
-            txtRecordingPath.Size = new Size(231, 23);
-            txtRecordingPath.TabIndex = 4;
+            label2.AutoSize = true;
+            label2.Location = new Point(78, 112);
+            label2.Name = "label2";
+            label2.Size = new Size(45, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Status :";
+            // 
+            // dgvAssignment
+            // 
+            dgvAssignment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            dgvAssignment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAssignment.Location = new Point(3, 212);
+            dgvAssignment.Name = "dgvAssignment";
+            dgvAssignment.Size = new Size(617, 214);
+            dgvAssignment.TabIndex = 2;
+            dgvAssignment.CellContentClick += dataGridView3_CellContentClick;
+            // 
+            // btnAssign
+            // 
+            btnAssign.BackColor = Color.Teal;
+            btnAssign.Location = new Point(379, 151);
+            btnAssign.Name = "btnAssign";
+            btnAssign.Size = new Size(81, 29);
+            btnAssign.TabIndex = 4;
+            btnAssign.Text = "Assign";
+            btnAssign.UseVisualStyleBackColor = false;
+            // 
+            // cmbStatus
+            // 
+            cmbStatus.FormattingEnabled = true;
+            cmbStatus.Location = new Point(78, 130);
+            cmbStatus.Name = "cmbStatus";
+            cmbStatus.Size = new Size(207, 23);
+            cmbStatus.TabIndex = 3;
+            // 
+            // cmbTranscriber
+            // 
+            cmbTranscriber.FormattingEnabled = true;
+            cmbTranscriber.Location = new Point(78, 58);
+            cmbTranscriber.Name = "cmbTranscriber";
+            cmbTranscriber.Size = new Size(207, 23);
+            cmbTranscriber.TabIndex = 2;
+            // 
+            // labelTranscriber
+            // 
+            labelTranscriber.AutoSize = true;
+            labelTranscriber.Location = new Point(78, 40);
+            labelTranscriber.Name = "labelTranscriber";
+            labelTranscriber.Size = new Size(71, 15);
+            labelTranscriber.TabIndex = 0;
+            labelTranscriber.Text = "Transcriber :";
+            // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = Color.LightGray;
+            groupBox2.Controls.Add(dgvRecordings);
+            groupBox2.Controls.Add(comboBox5);
+            groupBox2.Controls.Add(comboBox4);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Controls.Add(lableMeeting);
+            groupBox2.Dock = DockStyle.Left;
+            groupBox2.Location = new Point(0, 0);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(653, 422);
+            groupBox2.TabIndex = 0;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Recording Selection";
+            // 
+            // dgvRecordings
+            // 
+            dgvRecordings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecordings.Location = new Point(0, 112);
+            dgvRecordings.Name = "dgvRecordings";
+            dgvRecordings.Size = new Size(556, 196);
+            dgvRecordings.TabIndex = 4;
+            // 
+            // comboBox5
+            // 
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Location = new Point(435, 35);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(207, 23);
+            comboBox5.TabIndex = 3;
+            // 
+            // comboBox4
+            // 
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Location = new Point(149, 35);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(206, 23);
+            comboBox4.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(375, 38);
+            label3.Name = "label3";
+            label3.Size = new Size(54, 15);
+            label3.TabIndex = 1;
+            label3.Text = "Agenda :";
+            // 
+            // lableMeeting
+            // 
+            lableMeeting.AutoSize = true;
+            lableMeeting.Location = new Point(86, 38);
+            lableMeeting.Name = "lableMeeting";
+            lableMeeting.Size = new Size(57, 15);
+            lableMeeting.TabIndex = 0;
+            lableMeeting.Text = "Meeting :";
             // 
             // MeetingForm
             // 
@@ -609,6 +757,13 @@
             gbRecording.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            tabAssignments.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAssignment).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecordings).EndInit();
             ResumeLayout(false);
         }
 
@@ -663,5 +818,19 @@
         private GroupBox groupBox2;
         private TextBox txtRecordingPath;
         private Label lblRecordingPath;
+        private Label label3;
+        private Label lableMeeting;
+        private ComboBox comboBox5;
+        private ComboBox comboBox4;
+        private GroupBox groupBox3;
+        private TextBox textBox4;
+        private Label label4;
+        private Label labelTranscriber;
+        private DataGridView dgvRecordings;
+        private ComboBox cmbStatus;
+        private ComboBox cmbTranscriber;
+        private Button btnAssign;
+        private DataGridView dgvAssignment;
+        private Label label2;
     }
 }

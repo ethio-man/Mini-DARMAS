@@ -31,5 +31,10 @@ namespace Mini_DARMAS.Forms.Operator
         {
 
         }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
