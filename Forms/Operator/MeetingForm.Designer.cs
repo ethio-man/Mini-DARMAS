@@ -60,6 +60,21 @@
             btnRemove = new Button();
             tabRecording = new TabPage();
             tabAssignments = new TabPage();
+            btnDocument = new Button();
+            groupBox1 = new GroupBox();
+            labelMeeting = new Label();
+            labelAgenda = new Label();
+            comboBox2 = new ComboBox();
+            comboBox3 = new ComboBox();
+            gbFile = new GroupBox();
+            lblFile = new Label();
+            btnBrowseRecord = new Button();
+            dgvRecordings = new DataGridView();
+            gbRecording = new GroupBox();
+            button1 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            label1 = new Label();
             tabOperator.SuspendLayout();
             tabMetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMeeting).BeginInit();
@@ -68,6 +83,11 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelMeetingSelected.SuspendLayout();
             gbAgenda.SuspendLayout();
+            tabRecording.SuspendLayout();
+            groupBox1.SuspendLayout();
+            gbFile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecordings).BeginInit();
+            gbRecording.SuspendLayout();
             SuspendLayout();
             // 
             // tabOperator
@@ -276,6 +296,7 @@
             // gbAgenda
             // 
             gbAgenda.BackColor = Color.LightGray;
+            gbAgenda.Controls.Add(btnDocument);
             gbAgenda.Controls.Add(textBox3);
             gbAgenda.Controls.Add(textBox2);
             gbAgenda.Controls.Add(textBox1);
@@ -376,6 +397,10 @@
             // tabRecording
             // 
             tabRecording.BackColor = Color.Silver;
+            tabRecording.Controls.Add(gbRecording);
+            tabRecording.Controls.Add(dgvRecordings);
+            tabRecording.Controls.Add(gbFile);
+            tabRecording.Controls.Add(groupBox1);
             tabRecording.Location = new Point(4, 24);
             tabRecording.Name = "tabRecording";
             tabRecording.Size = new Size(1268, 422);
@@ -390,6 +415,164 @@
             tabAssignments.Size = new Size(1268, 422);
             tabAssignments.TabIndex = 3;
             tabAssignments.Text = "Assignments";
+            // 
+            // btnDocument
+            // 
+            btnDocument.BackColor = Color.LightSkyBlue;
+            btnDocument.Location = new Point(43, 219);
+            btnDocument.Name = "btnDocument";
+            btnDocument.Size = new Size(106, 34);
+            btnDocument.TabIndex = 11;
+            btnDocument.Text = "Browse";
+            btnDocument.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.LightGray;
+            groupBox1.Controls.Add(comboBox3);
+            groupBox1.Controls.Add(comboBox2);
+            groupBox1.Controls.Add(labelAgenda);
+            groupBox1.Controls.Add(labelMeeting);
+            groupBox1.Dock = DockStyle.Top;
+            groupBox1.Location = new Point(0, 0);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1268, 100);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Agenda Selection";
+            // 
+            // labelMeeting
+            // 
+            labelMeeting.AutoSize = true;
+            labelMeeting.Location = new Point(197, 19);
+            labelMeeting.Name = "labelMeeting";
+            labelMeeting.Size = new Size(57, 15);
+            labelMeeting.TabIndex = 0;
+            labelMeeting.Text = "Meeting :";
+            // 
+            // labelAgenda
+            // 
+            labelAgenda.AutoSize = true;
+            labelAgenda.Location = new Point(197, 64);
+            labelAgenda.Name = "labelAgenda";
+            labelAgenda.Size = new Size(54, 15);
+            labelAgenda.TabIndex = 1;
+            labelAgenda.Text = "Agenda :";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(260, 16);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(267, 23);
+            comboBox2.TabIndex = 2;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(260, 61);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(267, 23);
+            comboBox3.TabIndex = 3;
+            // 
+            // gbFile
+            // 
+            gbFile.BackColor = Color.LightGray;
+            gbFile.Controls.Add(btnBrowseRecord);
+            gbFile.Controls.Add(lblFile);
+            gbFile.Location = new Point(8, 106);
+            gbFile.Name = "gbFile";
+            gbFile.Size = new Size(740, 100);
+            gbFile.TabIndex = 1;
+            gbFile.TabStop = false;
+            gbFile.Text = "File Attachment";
+            // 
+            // lblFile
+            // 
+            lblFile.AutoSize = true;
+            lblFile.Location = new Point(92, 34);
+            lblFile.Name = "lblFile";
+            lblFile.Size = new Size(104, 15);
+            lblFile.TabIndex = 0;
+            lblFile.Text = "Attach Audio File :";
+            // 
+            // btnBrowseRecord
+            // 
+            btnBrowseRecord.BackColor = Color.LightSkyBlue;
+            btnBrowseRecord.Location = new Point(202, 28);
+            btnBrowseRecord.Name = "btnBrowseRecord";
+            btnBrowseRecord.Size = new Size(75, 27);
+            btnBrowseRecord.TabIndex = 1;
+            btnBrowseRecord.Text = "Browse";
+            btnBrowseRecord.UseVisualStyleBackColor = false;
+            // 
+            // dgvRecordings
+            // 
+            dgvRecordings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecordings.Location = new Point(754, 106);
+            dgvRecordings.Name = "dgvRecordings";
+            dgvRecordings.Size = new Size(506, 313);
+            dgvRecordings.TabIndex = 2;
+            // 
+            // gbRecording
+            // 
+            gbRecording.BackColor = Color.LightGray;
+            gbRecording.Controls.Add(label1);
+            gbRecording.Controls.Add(button4);
+            gbRecording.Controls.Add(button3);
+            gbRecording.Controls.Add(button1);
+            gbRecording.Location = new Point(8, 233);
+            gbRecording.Name = "gbRecording";
+            gbRecording.Size = new Size(740, 181);
+            gbRecording.TabIndex = 3;
+            gbRecording.TabStop = false;
+            gbRecording.Text = "Recording Controls";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.White;
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Red;
+            button1.Location = new Point(144, 74);
+            button1.Name = "button1";
+            button1.Size = new Size(39, 35);
+            button1.TabIndex = 0;
+            button1.Text = "🔴";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.White;
+            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.Black;
+            button3.Location = new Point(189, 74);
+            button3.Name = "button3";
+            button3.Size = new Size(41, 35);
+            button3.TabIndex = 1;
+            button3.Text = "⏯️";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.White;
+            button4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.Black;
+            button4.Location = new Point(236, 74);
+            button4.Name = "button4";
+            button4.Size = new Size(41, 35);
+            button4.TabIndex = 2;
+            button4.Text = "⬛";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(144, 129);
+            label1.Name = "label1";
+            label1.Size = new Size(101, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Recording Timer :";
+            label1.Click += label1_Click_1;
             // 
             // MeetingForm
             // 
@@ -411,6 +594,14 @@
             panelMeetingSelected.PerformLayout();
             gbAgenda.ResumeLayout(false);
             gbAgenda.PerformLayout();
+            tabRecording.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            gbFile.ResumeLayout(false);
+            gbFile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecordings).EndInit();
+            gbRecording.ResumeLayout(false);
+            gbRecording.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -448,5 +639,21 @@
         private DataGridView dataGridView1;
         private TextBox textBox3;
         private TextBox textBox2;
+        private Button btnDocument;
+        private GroupBox groupBox1;
+        private ComboBox comboBox2;
+        private Label labelAgenda;
+        private Label labelMeeting;
+        private ComboBox comboBox3;
+        private GroupBox gbRecording;
+        private Label label1;
+        private Button button4;
+        private Button button3;
+        private DataGridView dgvRecordings;
+        private GroupBox gbFile;
+        private Button btnBrowseRecord;
+        private Button button1;
+        private Label lblFile;
+        private GroupBox groupBox2;
     }
 }
