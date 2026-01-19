@@ -1,5 +1,6 @@
 using Mini_DARMAS.Forms.Operator;
-
+using MiniDARMAS.Data.DbContext;
+using MiniDARMAS.Data.DbContext;
 namespace Mini_DARMAS
 {
     internal static class Program
@@ -10,6 +11,7 @@ namespace Mini_DARMAS
         [STAThread]
         static void Main()
         {
+
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
