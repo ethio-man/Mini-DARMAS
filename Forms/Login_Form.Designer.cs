@@ -1,6 +1,6 @@
 ﻿namespace Mini_DARMAS.Forms
 {
-    partial class LoginForm
+    partial class Login_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "LoginForm";
+            SuspendLayout();
+            // 
+            // LoginForm
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Name = "LoginForm";
+            Text = "LoginForm";
+            Load += LoginForm_Load;
+            ResumeLayout(false);
         }
 
         #endregion
