@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Mini_DARMAS.Forms
 {
-    public partial class LoginForm : Form
+    public partial class Login_Form : Form
     {
-        public LoginForm()
+        public Login_Form()
         {
             InitializeComponent();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
