@@ -30,15 +30,15 @@
         {
             tabOperator = new TabControl();
             tabMetting = new TabPage();
-            dgvMeeting = new DataGridView();
+            dgvMeetings = new DataGridView();
             groupBoxMetting = new GroupBox();
             btnDelete = new Button();
             btnUpdate = new Button();
             btnSave = new Button();
-            dateTimePicker1 = new DateTimePicker();
+            dtpMeetingDate = new DateTimePicker();
             txtLocation = new TextBox();
             txtChairperson = new TextBox();
-            txtMeeting = new TextBox();
+            txtMeetingNo = new TextBox();
             lblDate = new Label();
             lblChairperson = new Label();
             labelLocation = new Label();
@@ -66,7 +66,6 @@
             lblRecordingPath = new Label();
             lblFile = new Label();
             btnBrowseRecord = new Button();
-            label1 = new Label();
             btnSaveRecord = new Button();
             btnPause_Start = new Button();
             btnRecord = new Button();
@@ -91,7 +90,7 @@
             lableMeeting = new Label();
             tabOperator.SuspendLayout();
             tabMetting.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvMeeting).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMeetings).BeginInit();
             groupBoxMetting.SuspendLayout();
             tabAgenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -125,7 +124,7 @@
             // tabMetting
             // 
             tabMetting.BackColor = Color.Silver;
-            tabMetting.Controls.Add(dgvMeeting);
+            tabMetting.Controls.Add(dgvMeetings);
             tabMetting.Controls.Add(groupBoxMetting);
             tabMetting.Location = new Point(4, 24);
             tabMetting.Name = "tabMetting";
@@ -134,14 +133,15 @@
             tabMetting.TabIndex = 0;
             tabMetting.Text = "Meetings";
             // 
-            // dgvMeeting
+            // dgvMeetings
             // 
-            dgvMeeting.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMeeting.Dock = DockStyle.Fill;
-            dgvMeeting.Location = new Point(3, 158);
-            dgvMeeting.Name = "dgvMeeting";
-            dgvMeeting.Size = new Size(1262, 261);
-            dgvMeeting.TabIndex = 1;
+            dgvMeetings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMeetings.Dock = DockStyle.Fill;
+            dgvMeetings.Location = new Point(3, 158);
+            dgvMeetings.Name = "dgvMeetings";
+            dgvMeetings.Size = new Size(1262, 261);
+            dgvMeetings.TabIndex = 1;
+            dgvMeetings.CellContentClick += dgvMeetings_CellContentClick;
             // 
             // groupBoxMetting
             // 
@@ -149,10 +149,10 @@
             groupBoxMetting.Controls.Add(btnDelete);
             groupBoxMetting.Controls.Add(btnUpdate);
             groupBoxMetting.Controls.Add(btnSave);
-            groupBoxMetting.Controls.Add(dateTimePicker1);
+            groupBoxMetting.Controls.Add(dtpMeetingDate);
             groupBoxMetting.Controls.Add(txtLocation);
             groupBoxMetting.Controls.Add(txtChairperson);
-            groupBoxMetting.Controls.Add(txtMeeting);
+            groupBoxMetting.Controls.Add(txtMeetingNo);
             groupBoxMetting.Controls.Add(lblDate);
             groupBoxMetting.Controls.Add(lblChairperson);
             groupBoxMetting.Controls.Add(labelLocation);
@@ -174,6 +174,7 @@
             btnDelete.TabIndex = 11;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnUpdate
             // 
@@ -184,6 +185,7 @@
             btnUpdate.TabIndex = 10;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnSave
             // 
@@ -194,15 +196,16 @@
             btnSave.TabIndex = 9;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
-            // dateTimePicker1
+            // dtpMeetingDate
             // 
-            dateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm";
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(364, 110);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(170, 23);
-            dateTimePicker1.TabIndex = 8;
+            dtpMeetingDate.CustomFormat = "yyyy-MM-dd HH:mm";
+            dtpMeetingDate.Format = DateTimePickerFormat.Custom;
+            dtpMeetingDate.Location = new Point(364, 110);
+            dtpMeetingDate.Name = "dtpMeetingDate";
+            dtpMeetingDate.Size = new Size(170, 23);
+            dtpMeetingDate.TabIndex = 8;
             // 
             // txtLocation
             // 
@@ -218,12 +221,12 @@
             txtChairperson.Size = new Size(170, 23);
             txtChairperson.TabIndex = 5;
             // 
-            // txtMeeting
+            // txtMeetingNo
             // 
-            txtMeeting.Location = new Point(43, 47);
-            txtMeeting.Name = "txtMeeting";
-            txtMeeting.Size = new Size(170, 23);
-            txtMeeting.TabIndex = 4;
+            txtMeetingNo.Location = new Point(43, 47);
+            txtMeetingNo.Name = "txtMeetingNo";
+            txtMeetingNo.Size = new Size(170, 23);
+            txtMeetingNo.TabIndex = 4;
             // 
             // lblDate
             // 
@@ -383,13 +386,10 @@
             // 
             // lblAgendaTitle
             // 
-            lblAgendaTitle.AutoSize = true;
-            lblAgendaTitle.Location = new Point(43, 38);
+            lblAgendaTitle.Location = new Point(0, 0);
             lblAgendaTitle.Name = "lblAgendaTitle";
-            lblAgendaTitle.Size = new Size(80, 15);
-            lblAgendaTitle.TabIndex = 5;
-            lblAgendaTitle.Text = "Agenda Title :";
-            lblAgendaTitle.Click += label1_Click;
+            lblAgendaTitle.Size = new Size(100, 23);
+            lblAgendaTitle.TabIndex = 12;
             // 
             // btnAdd
             // 
@@ -410,7 +410,6 @@
             button2.TabIndex = 3;
             button2.Text = "Update";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // btnRemove
             // 
@@ -450,7 +449,6 @@
             gbRecording.Controls.Add(lblRecordingPath);
             gbRecording.Controls.Add(lblFile);
             gbRecording.Controls.Add(btnBrowseRecord);
-            gbRecording.Controls.Add(label1);
             gbRecording.Controls.Add(btnSaveRecord);
             gbRecording.Controls.Add(btnPause_Start);
             gbRecording.Controls.Add(btnRecord);
@@ -496,16 +494,6 @@
             btnBrowseRecord.TabIndex = 1;
             btnBrowseRecord.Text = "Browse";
             btnBrowseRecord.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(296, 220);
-            label1.Name = "label1";
-            label1.Size = new Size(101, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Recording Timer :";
-            label1.Click += label1_Click_1;
             // 
             // btnSaveRecord
             // 
@@ -636,7 +624,6 @@
             dgvAssignment.Name = "dgvAssignment";
             dgvAssignment.Size = new Size(617, 214);
             dgvAssignment.TabIndex = 2;
-            dgvAssignment.CellContentClick += dataGridView3_CellContentClick;
             // 
             // btnAssign
             // 
@@ -740,9 +727,10 @@
             Controls.Add(tabOperator);
             Name = "MeetingForm";
             Text = "MeetingForm";
+            Load += MeetingForm_Load;
             tabOperator.ResumeLayout(false);
             tabMetting.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvMeeting).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMeetings).EndInit();
             groupBoxMetting.ResumeLayout(false);
             groupBoxMetting.PerformLayout();
             tabAgenda.ResumeLayout(false);
@@ -779,14 +767,14 @@
         private Label lblChairperson;
         private Label labelLocation;
         private Label lblDate;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpMeetingDate;
         private TextBox txtLocation;
         private TextBox txtChairperson;
-        private TextBox txtMeeting;
+        private TextBox txtMeetingNo;
         private Button btnDelete;
         private Button btnUpdate;
         private Button btnSave;
-        private DataGridView dgvMeeting;
+        private DataGridView dgvMeetings;
         private GroupBox gbAgenda;
         private Button btnRemove;
         private Button button2;
@@ -808,7 +796,6 @@
         private Label labelMeeting;
         private ComboBox comboBox3;
         private GroupBox gbRecording;
-        private Label label1;
         private Button btnSaveRecord;
         private Button btnPause_Start;
         private Button btnRecord;
